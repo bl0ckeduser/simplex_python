@@ -3,7 +3,7 @@ import fractions
 
 # simplex_python
 #
-# by Gabriel, 2019
+# by Gabriel, 2019-2020
 #
 # Public Domain
 #
@@ -26,6 +26,7 @@ class SimplexVectorEntry:
 
     def copy(self):
         the_clone = SimplexVectorEntry(self.variable_index, self.coefficient)
+        return the_clone
 
     __copy__ = copy
 
@@ -42,6 +43,7 @@ class SimplexVector:
         the_clone.name = self.name
         the_clone.constant_term = self.constant_term
         the_clone.entries = copy.deepcopy(self.entries)
+        return the_clone
 
     __copy__ = copy
 
